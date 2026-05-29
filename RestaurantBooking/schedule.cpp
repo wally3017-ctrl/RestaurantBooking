@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <ctime>
 #include "customer.cpp"
 
@@ -6,10 +6,10 @@ using std::time_t;
 
 class Schedule {
 public:
-	Schedule(tm dateTime, int numberOfPeople, Customer customer) :
+	Schedule(tm dateTime, int numberOfPeople, Customer CUSTOMER) :
 		dateTime{ dateTime }, 
 		numberOfPeople{ numberOfPeople }, 
-		customer{ customer } {
+		CUSTOMER{ CUSTOMER } {
 	}
 
 	tm getDateTime() {
@@ -21,11 +21,11 @@ public:
 	}
 
 	Customer getCustomer() {
-		return customer;
+		return CUSTOMER;
 	}
 
 private:
 	tm dateTime;
 	int numberOfPeople;
-	Customer customer;
+	Customer CUSTOMER;
 };
