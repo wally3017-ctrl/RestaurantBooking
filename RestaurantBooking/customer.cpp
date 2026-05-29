@@ -1,10 +1,11 @@
-#pragma once
+﻿#pragma once
 #include <string>
 
 using std::string;
 
 class Customer {
 public:
+	Customer() = default;
 	Customer(string name, string phoneNumber) : 
 		name{ name }, 
 		phoneNumber{ phoneNumber } {
@@ -16,7 +17,7 @@ public:
 		email{ email } {
 	}
 
-	string getEmail() {
+	virtual string getEmail() {
 		return email;
 	}
 
